@@ -5,11 +5,11 @@
     "fields": {
       "user": 1,
       "photo": "",
-      "role": 2,
-      "company_name": "ICV",
+      "role": 3,
+      "company_name": "KI",
       "is_nda_signed": true,
       "expiration_date": null,
-      "created_at": "2024-07-18T11:44:39.863Z",
+      "created_at": "2025-06-24T19:16:39.863Z",
       "deleted_at": null
     }
   },
@@ -20,10 +20,10 @@
       "user": 2,
       "photo": "",
       "role": 3,
-      "company_name": "KI",
+      "company_name": "ZC",
       "is_nda_signed": true,
       "expiration_date": null,
-      "created_at": "2024-07-18T11:44:39.863Z",
+      "created_at": "2025-06-24T19:16:39.863Z",
       "deleted_at": null
     }
   },
@@ -34,10 +34,10 @@
       "user": 3,
       "photo": "",
       "role": 3,
-      "company_name": "ZC",
+      "company_name": "MT",
       "is_nda_signed": true,
       "expiration_date": null,
-      "created_at": "2024-07-18T11:44:39.863Z",
+      "created_at": "2025-06-24T19:16:39.863Z",
       "deleted_at": null
     }
   },
@@ -47,11 +47,177 @@
     "fields": {
       "user": 4,
       "photo": "",
-      "role": 3,
-      "company_name": "MT",
+      "role": 2,
+      "patronymic": "Викторович",
+      "company_name": "ICV",
       "is_nda_signed": true,
       "expiration_date": null,
-      "created_at": "2024-07-18T11:44:39.863Z",
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "photo": "",
+      "role": 2,
+      "patronymic": "Андреевич",
+      "company_name": "ICV",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "photo": "",
+      "role": 2,
+      "patronymic": "Дмитриевич",
+      "company_name": "ICV",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 7,
+    "fields": {
+      "user": 7,
+      "photo": "",
+      "role": 1,
+      "patronymic": "Мирославович",
+      "company_name": "ООО '50ом Тех.'",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 8,
+    "fields": {
+      "user": 8,
+      "photo": "",
+      "role": 1,
+      "patronymic": "Витальевич",
+      "company_name": "ООО 'Систематика Консалтинг'",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 9,
+    "fields": {
+      "user": 9,
+      "photo": "",
+      "role": 1,
+      "patronymic": "Анатольевич",
+      "company_name": "АО 'НИИМЭ'",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 10,
+    "fields": {
+      "user": 10,
+      "photo": "",
+      "role": 1,
+      "patronymic": "Александрович",
+      "company_name": "АО 'НИИМЭ'",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 11,
+    "fields": {
+      "user": 11,
+      "photo": "",
+      "role": 1,
+      "patronymic": "Иванович",
+      "company_name": "ООО 'ТУСУР-Электроника'",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 12,
+    "fields": {
+      "user": 12,
+      "photo": "",
+      "role": 1,
+      "patronymic": "Михайлович",
+      "company_name": "АО 'Концерн ВКО 'Алмаз-Антей''",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 13,
+    "fields": {
+      "user": 13,
+      "photo": "",
+      "role": 1,
+      "patronymic": "Юрьевич",
+      "company_name": "Акционерное общество 'ПКК Миландр'",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 14,
+    "fields": {
+      "user": 14,
+      "photo": "",
+      "role": 3,
+      "patronymic": "Александрович",
+      "company_name": "KI",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
+      "deleted_at": null
+    }
+  },
+  {
+    "model": "account.profile",
+    "pk": 15,
+    "fields": {
+      "user": 15,
+      "photo": "",
+      "role": 1,
+      "patronymic": "Евгеньевич",
+      "company_name": "АО 'НИИЭТ'",
+      "is_nda_signed": true,
+      "expiration_date": null,
+      "created_at": "2025-06-24T19:16:39.863Z",
       "deleted_at": null
     }
   }

@@ -7,7 +7,6 @@ from .email_recipients import send_email_about_unread_message
 import time
 
 def send_unread_messages():
-    """Получает данные из email_recipients, работает с cron"""
     import sys
     print("=== STEP 1: Function started ===", flush=True)
     

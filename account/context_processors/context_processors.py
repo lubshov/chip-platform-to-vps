@@ -10,8 +10,6 @@ def user_role(request):
 
 
 def unread_messages(request):
-    """Выявляет непрочитанные сообщения"""
-    """Не связано с отправкой на почту!!!"""
     if not request.user.is_authenticated:
         return {'has_unread_messages_by_order_id': {}}
 

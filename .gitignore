@@ -169,3 +169,18 @@ ref/
 # database
 
 *.sqlite3
+*.crt
+*.key
+db.sqlite3(01102026)
+db.sqlite3(030926)
+db.sqlite3(08092026)
+db.sqlite3(16.07)
+db.sqlite3(16092026)
+db.sqlite3(2)
+db.sqlite3(26_08_26)
+db.sqlite3(29092026)
+db.sqlite3(3)
+db.sqlite3(4)
+db.sqlite3(5)
+db.sqlite3(6)
+*.csr

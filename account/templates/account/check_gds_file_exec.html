@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load custom_filters %}
 
 {% block content %}
     <h1>Проверка GDS файла</h1>
@@ -19,7 +18,7 @@
                             <td>
                                 {% if value %}
                                     {% if value|length > 20 and value|slice:":6" == "/media" %}
-                                        <a class="function-button" href="{% url 'protected_download' file_path=value %}" download target="_blank">Скачать {{ value|clean_filename }}</a>
+                                        {{ value }}
                                     {% else %}
                                         {{ value }}
                                     {% endif %}

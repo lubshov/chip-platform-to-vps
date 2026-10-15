@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta name="theme-color" content="{% if current_theme == 'dark' %}#121212{% else %}#ffffff{% endif %}">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <span class="logo">
+                <a class="logo_text" href="{% url "dashboard" %}">
+                    Интерактивная платформа контрактного <br>
+                    производства полупроводниковых пластин
+                </a>
+            </span>
+            {% if request.user.is_authenticated %}
+                <ul class="menu">
+                    {% block tabs %}
+                        {% if user_role == "Куратор" %}
+                            <li {% if section == "dashboard" %}class="selected"{% endif %}>
+                                <a href="{% url "dashboard" %}">Заказы</a>
+                            </li>
+                            <li {% if section == "technical_materials" %}class="selected"{% endif %}>
+                                <a href="{% url "technical_materials" %}">КИП (PDK)</a>
+                            </li>
+                            <li {% if section == "all_documents" %}class="selected"{% endif %}>
+                                <a href="{% url "all_documents" %}">Документы</a>
+                            </li>
+                            <li {% if section == "help_files" %}class="selected"{% endif %}>
+                                <a href="{% url "help_files" %}">Полезные материалы</a>
+                            </li>
+                        {% elif user_role == "Исполнитель" %}
+                            <li {% if section == "dashboard" %}class="selected"{% endif %}>
+                                <a href="{% url "dashboard" %}">Заказы</a>
+                            </li>
+                            <li {% if section == "technical_materials" %}class="selected"{% endif %}>
+                                <a href="{% url "technical_materials" %}">КИП (PDK)</a>
+                            </li>
+                            <li {% if section == "help_files" %}class="selected"{% endif %}>
+                                <a href="{% url "help_files" %}">Полезные материалы</a>
+                            </li>
+                            {% comment %} <li {% if section == "edit_platform" %}class="selected"{% endif %}>
+                                <a href="{% url "edit_platform" %}">Работа с техпроцессами</a>
+                            </li> {% endcomment %}
+                        {% else %}
+                            <li {% if section == "dashboard" %}class="selected"{% endif %}>
+                                <a href="{% url "dashboard" %}">Заказы</a>
+                            </li>
+                            <li {% if section == "technical_materials" %}class="selected"{% endif %}>
+                                <a href="{% url "technical_materials" %}">КИП (PDK)</a>
+                            </li>
+                            <li {% if section == "my_documents" %}class="selected"{% endif %}>
+                                <a href="{% url "my_documents" request.user.id %}">Мои документы</a>
+                            </li>
+                            <li {% if section == "help_files" %}class="selected"{% endif %}>
+                                <a href="{% url "help_files" %}">Полезные материалы</a>
+                            </li>
+                        {% endif %}
+                    {% endblock %}
+                </ul>
+            {% endif %}
+            <span class="user">
+            {% if request.user.is_authenticated %}
+                <p>Привет, {{ request.user.first_name|default:request.user.username }}!</p>
+                <a href="{% url "logout" %}">Выйти</a>
+            {% else %}
+                <a href="{% url "login" %}">Войти</a>
+            {% endif %}
+            </span>
+        </div>
+        {% block sub_tabs %}
+        {% endblock %}
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div id="footer">
+            <div class="footer_elements">
+                <div class="footer_logo">
+                    <span class="logo">
+                        <a href="{% url "dashboard" %}">
+                            @ 2026 ООО «ИнноЦентр ВАО»
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <ul class="footer_list">
+                <li class="footer_list-element">
+                    <a href="{% url "edit" %}">
+                        Редактировать профиль
+                    </a>
+                </li>
+                <li class="footer_list-element">
+                    <a href="{% url "password_recovery" %}">
+                        Сменить пароль
+                    </a>
+                </li>
+            </ul>
+            <div class="footer_red_text">
+                <div class="footer_text">
+                    <span class="text">
+                        Сайт работает в тестовом режиме без 
+                        полноценной реализации мер информационной
+                        безопасности. Пользователи принимают на 
+                        себя всю ответственность за безопасность и
+                        сохранность передаваемых данных
+                    </span>
+                </div>
+            </div>
+            <div class="button-themes">
+                <button id="themeToggle" class="theme-toggle">
+                    {% if current_theme == 'dark' %}🌙{% else %}☀️{% endif %}
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const THEME_API_URL = "{% url 'set_theme' %}";
+        const CSRF_TOKEN = "{{ csrf_token }}";
+    </script>
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

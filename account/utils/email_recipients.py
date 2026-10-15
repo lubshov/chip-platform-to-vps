@@ -6,7 +6,7 @@ from account.models import Message, UserTopic
 
 def send_email_about_unread_message(message):
     """Возвращает список email-ов получателей (не отправляет письма)"""
-    """Используется для unread_message_email_sender(cron)"""
+    
     topic = message.topic
     
     user_topics = UserTopic.objects.filter(topic=topic).select_related('user__user')
