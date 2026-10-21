@@ -184,3 +184,6 @@ db.sqlite3(4)
 db.sqlite3(5)
 db.sqlite3(6)
 *.csr
+*.clinerules
+.kilo
+.vscode
